@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: email-extractor-saas
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: RATE_LIMIT_POINTS
+        value: 20
+      - key: RATE_LIMIT_DURATION
+        value: 60
